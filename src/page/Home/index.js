@@ -84,10 +84,6 @@ export default function Home(){
                 </Card.Text>
             </Card.Body>
             <Card.Footer className="cardFooter">
-                <a href="">
-                    <ListOutlinedIcon/>
-                    Detalhes
-                </a>
                 <Button className="button" onClick={handleContactRequest}>Solicitar um Orçamento</Button>
             </Card.Footer>
             </Card>
@@ -102,10 +98,6 @@ export default function Home(){
                 </Card.Text>
             </Card.Body>
             <Card.Footer className="cardFooter">
-                <a href="">
-                    <ListOutlinedIcon/>
-                    Detalhes
-                </a>
                 <Button className="button" onClick={handleContactRequest}>Solicitar um Orçamento</Button>
             </Card.Footer>
             </Card>
@@ -120,10 +112,6 @@ export default function Home(){
                 </Card.Text>
             </Card.Body>
             <Card.Footer className="cardFooter">
-                <a href="">
-                    <ListOutlinedIcon/>
-                    Detalhes
-                </a>
                 <Button className="button" onClick={handleContactRequest}>Solicitar um Orçamento</Button>
             </Card.Footer>
             </Card>
@@ -143,17 +131,17 @@ export default function Home(){
                 </Col>
             </Row>
             <Row className="Rows">
-                <Col className="text-col" xs={12} sm={7}>
+                <Col className="text-col">
                     <h3>Qualidade de Vida</h3>
                         <p>Temos em nosso portfólio opções de projetos 100% sustentáveis,
                         voltados à saúde que promovem atividades físicas e sociais.</p>
                 </Col>
-                <Col className="img-col img-left">
+                <Col className="img-col img-left" sm={6}>
                     <img src={lifeQuality}/>
                 </Col>
             </Row>
             <Row className="Rows">
-                <Col className="img-col">
+                <Col className="img-col" sm={6}>
                     <img src={Payment}/>
                 </Col>
                 <Col className="text-col">
@@ -207,28 +195,27 @@ export default function Home(){
             <Row className="our-team">
                 <h5>Conheça nosso time</h5> 
                 <Container className="team-container">
-                    <Col className="cols">
+                    <div className="co-worker">
                         <img src={image} alt=""/>
                         <div className="employee-content">
                             <h6>Nome:</h6>
                             <p>Profissao</p>
                         </div>
-                    </Col>
-                    <Col className="cols">
+                    </div>
+                    <div className="co-worker">
                         <img src={image} alt=""/>
                         <div className="employee-content">
                             <h6>Nome:</h6>
                             <p>Profissao</p>
                         </div>
-                    </Col>
-                    <Col className="cols">
-                        
+                    </div>
+                    <div className="co-worker">
                         <img src={image} alt=""/>
                         <div className="employee-content">
                             <h6>Nome:</h6>
                             <p>Profissao</p>
                         </div>
-                    </Col>
+                    </div>
                 </Container>
             </Row>
         </Container>

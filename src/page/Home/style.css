@@ -101,7 +101,7 @@ p{
 
 .Card-Deck .cards .cardFooter{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     border: none;
 }
 
@@ -138,7 +138,8 @@ h2 .plus-icon{
     background-color: #ECECEC;
     margin-top: 30px;
     margin-bottom: 30px;
-    height: 250px;
+    min-height: 250px;
+    flex-wrap:wrap;
 }
 
 .container-info .Rows .img-col{
@@ -149,19 +150,12 @@ h2 .plus-icon{
 .container-info .Rows img{
     height: 250px;
     min-width: 560px;
-    position: inherit;
 }
 
 .container-info .Rows .text-col{
     text-align: center;
     margin-top: 10px;
     position: inherit;
-}
-.container-info .Rows .text-col{
-    text-align: left;
-}
-.container-info .Rows .text-col p{
-    margin-bottom: 0;
 }
 
 .container-info .Rows .text-col h3{
@@ -239,25 +233,23 @@ h2 .plus-icon{
     display: inline-block;
     text-align: center;
     align-items: center;
+    /*width: 700px;*/
 }
 
 .company-information .our-team .team-container{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    max-width: 800px;
+}
+.company-information .our-team .team-container .co-worker{
+    margin-left: 20px;
 }
 .company-information .our-team img{
     margin-top: 15px;
     max-width: 180px;
     border-radius: 48%;
-}
-
-.company-information .our-team .team-container .cols .employee-content{
-    max-width: 200px;
-}
-.company-information .our-team .team-container .cols .employee-content p{
-    word-break: break-all;
-    color: lightslategrey;
 }
 
 .container-popover{

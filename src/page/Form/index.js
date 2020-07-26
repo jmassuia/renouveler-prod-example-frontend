@@ -71,7 +71,9 @@ export default function UserForm(){
             .then(res =>{
                 setLoading(false);
                 setConfirmSent(true);
-                history.push('/');
+                setTimeout(() => {
+                    history.push('/');
+                }, 2000);    
                 console.log(res);
             }).catch(err =>{
                 setLoading(false);
