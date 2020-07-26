@@ -67,7 +67,7 @@ export default function UserForm(){
 
         try{
             setLoading(true);
-            api.post('/sendMail',data)
+            api.post('/sendMail',data,{headers:{'Access-Control-Allow-Origin':'*'}})
             .then(res =>{
                 setLoading(false);
                 setConfirmSent(true);
