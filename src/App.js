@@ -28,7 +28,7 @@ function App() {
             </Navbar.Collapse>
     </Navbar> 
     <Routes/>
-    <div className="footer">
+    <div className="footer" id="footer">
             <Row className="contacts-compliance">
                 <Col className="contacts">
                     <h4>Contatos</h4>
