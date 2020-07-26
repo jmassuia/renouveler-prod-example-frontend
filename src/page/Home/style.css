@@ -24,7 +24,7 @@
     .jumbotron{
         height: 330px;
     }
- }
+}
 
 .jumbotron .slogan{
     margin-top: 80px;
@@ -83,8 +83,6 @@
 .Card-Deck .cards .cardBody{
     background-color: #ECECEC;
 }
-.Card-Deck .cards .cardBody p{
-}
 
 .Card-Deck .cards .cardFooter{
     display: flex;
@@ -136,7 +134,14 @@ h2 .plus-icon{
 
 .container-info .Rows img{
     height: 250px;
-    min-width: 560px;
+    width: 561px;
+}
+
+@media screen and (max-width: 500px){
+    .container-info .Rows img{
+        height: 200px;
+        width: 480px;
+    }
 }
 
 .container-info .Rows .text-col{

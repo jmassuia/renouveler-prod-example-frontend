@@ -136,7 +136,7 @@ export default function Home(){
                         <p>Temos em nosso portfólio opções de projetos 100% sustentáveis,
                         voltados à saúde que promovem atividades físicas e sociais.</p>
                 </Col>
-                <Col className="img-col img-left" sm={6}>
+                <Col className="img-col img-left" sm={5}>
                     <img src={lifeQuality}/>
                 </Col>
             </Row>
@@ -199,21 +199,21 @@ export default function Home(){
                         <img src={image} alt=""/>
                         <div className="employee-content">
                             <h6>Nome</h6>
-                            <p>Profissao</p>
+                            <p>Profissão</p>
                         </div>
                     </div>
                     <div className="co-worker">
                         <img src={image} alt=""/>
                         <div className="employee-content">
                             <h6>Nome</h6>
-                            <p>Profissao</p>
+                            <p>Profissão</p>
                         </div>
                     </div>
                     <div className="co-worker">
                         <img src={image} alt=""/>
                         <div className="employee-content">
                             <h6>Nome</h6>
-                            <p>Profissao</p>
+                            <p>Profissão</p>
                         </div>
                     </div>
                 </Container>
