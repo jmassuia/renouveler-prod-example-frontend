@@ -32,8 +32,8 @@ function App() {
             <Row className="contact-container">
                 <Col className="contacts">
                     <h4 id="footer">Contatos</h4>
-                    <p><strong>Telefone:</strong> (19) 33222442</p>
-                    <p><strong>E-mail:</strong> renouvelerDesign@gmail.com</p>
+                    <p><strong>Telefone:</strong> (19) 99661-0322</p>
+                    <p><strong>E-mail:</strong> renouveler.design@gmail.com</p>
                 </Col>
                 <Col className="social-media">
                     <a href="">

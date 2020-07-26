@@ -134,13 +134,19 @@ h2 .plus-icon{
 
 .container-info .Rows img{
     height: 250px;
-    width: 561px;
+    /*width: 561px;*/
+    width: 100%;
 }
 
-@media screen and (max-width: 500px){
+@media screen and (max-width: 520px){
     .container-info .Rows img{
-        height: 200px;
         width: 480px;
+    }
+}
+
+@media screen and (max-width: 1050px){
+    .container-info .Rows img{
+        width: 100%;
     }
 }
 
@@ -207,6 +213,7 @@ h2 .plus-icon{
 .company-information .Rows .img-group{
     margin-top: 40px;
     margin-bottom: 40px;
+    position: inherit;
 }
 
 .company-information .img-group img:hover{
@@ -225,9 +232,19 @@ h2 .plus-icon{
     display: inline-block;
     text-align: center;
     align-items: center;
-    /*width: 700px;*/
 }
 
+@media screen and (max-width: 1050px){
+    .company-information .our-team{
+        margin-left: 15%;
+    }
+}
+
+@media screen and (max-width: 520px){
+    .company-information .our-team{
+        margin-left: 2%;
+    }
+}
 .company-information .our-team .team-container{
     display: flex;
     justify-content: space-between;
