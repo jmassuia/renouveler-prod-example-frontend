@@ -178,7 +178,7 @@ export default function Home(){
                     a opção de fazer escolhas de forma personalizada de acordo com as cores de seu ambiente em diversos estilos
                     clássico, arrojado, vintage, tecnológico e contemporâneo.</p>
                 </Col>
-                <Col className="ribbon cols" xs={6} md={4}>
+                <Col className="ribbon cols" md={4}>
                     <div className="img-group">
                         <OverlayTrigger trigger="hover" placement="top" overlay={valuesOver} className="ent-cicle">
                             <img src={values}/>

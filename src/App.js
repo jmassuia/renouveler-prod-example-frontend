@@ -29,7 +29,7 @@ function App() {
     </Navbar> 
     <Routes/>
     <div className="footer">
-            <Row className="contacts-compliance">
+            <Row className="contact-container">
                 <Col className="contacts">
                     <h4 id="footer">Contatos</h4>
                     <p><strong>Telefone:</strong> (19) 33222442</p>
