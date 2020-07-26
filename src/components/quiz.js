@@ -21,8 +21,10 @@ export default function Quiz(){
     const [color,setColor] = useState('');
     const [favoritePlace,setFavoritePlace] = useState('');
     const [eventStyle, setEventStyle] = useState('');
+    const [confirmQuiz,setConfirmQuiz] = useState(true);
 
     const handleSubmit = () =>{
+        setConfirmQuiz(false);
         const quizResult ={
             tag: tag,
             color: color.hex,
@@ -37,6 +39,8 @@ export default function Quiz(){
     }
 
     return(
+      <div>
+      {confirmQuiz?
         <Form className="quiz">
             <Form.Row>
                 <Form.Group>
@@ -125,5 +129,7 @@ export default function Quiz(){
             </Form.Row>
             <Button type='button' className="confirm-button" variant={'outline-none'} onClick={handleSubmit}>Confirmar</Button>
         </Form>
+      :null}
+      </div>
     )   
 }

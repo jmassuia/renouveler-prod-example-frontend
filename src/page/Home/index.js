@@ -78,8 +78,8 @@ export default function Home(){
             <Card.Body className="cardBody">
                 <Card.Title>Home Office</Card.Title>
                 <Card.Text>
-                    Opções com muito estilo e sofisticação para seu escritório em sua casa, de acordo com
-                    sua necessidade, seja ela compacta ou arrojada! “Nossa missão e trazer a melhor
+                    Opções com muito estilo e sofisticação para seu escritório em sua casa, de acordo 
+                    com sua necessidade, seja ela compacta ou arrojada! “Nossa missão e trazer a melhor
                     experiência em arte e design de acordo com seu sonho”
                 </Card.Text>
             </Card.Body>
@@ -97,7 +97,7 @@ export default function Home(){
                 <Card.Title>Minimalista</Card.Title>
                 <Card.Text>
                     Ambientes com toque clássico e com mínimo, criando maior espaço entre cores,
-                    panorama e detalhes e fazendo a harmonia entre a decoração e transparência. Sua
+                    panorama e detalhes e fazendo a harmonia entre a decoração e transparência. Sua 
                     experiência com certeza será única ao vislumbrar nosso portfólio de detalhes.
                 </Card.Text>
             </Card.Body>
@@ -114,9 +114,9 @@ export default function Home(){
             <Card.Body className="cardBody">
                 <Card.Title>Sofisticado</Card.Title>
                 <Card.Text>
-                    Cozinhas e ambientes sofisticados de acordo com sua escolha através do projeto; seja ele
-                    rústico, vintage, clássico, contemporâneo ou tecnológico. “Opções em plafons em led,
-                    interruptores digitais e muito +”.
+                    Cozinhas e ambientes sofisticados de acordo com sua escolha através do projeto; seja ele rústico, 
+                    vintage, clássico, contemporâneo ou tecnológico. “Opções em plafons em led, interruptores 
+                    digitais e muito +”.
                 </Card.Text>
             </Card.Body>
             <Card.Footer className="cardFooter">

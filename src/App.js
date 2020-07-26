@@ -28,10 +28,10 @@ function App() {
             </Navbar.Collapse>
     </Navbar> 
     <Routes/>
-    <div className="footer" id="footer">
+    <div className="footer">
             <Row className="contacts-compliance">
                 <Col className="contacts">
-                    <h4>Contatos</h4>
+                    <h4 id="footer">Contatos</h4>
                     <p><strong>Telefone:</strong> (19) 33222442</p>
                     <p><strong>E-mail:</strong> renouvelerDesign@gmail.com</p>
                 </Col>

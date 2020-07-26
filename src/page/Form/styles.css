@@ -53,10 +53,11 @@ h4{
 
 .buttonGroup{
     display: inline-block;
-    margin-left: 36%;
     text-align: center;
+    margin-left: 36%;
     min-width: 300px;
 }
+
 button.submitForm{
     margin-top: 5px;
     background-color:rgb(84, 31, 102);
@@ -77,10 +78,11 @@ a.showQuiz{
     position: absolute;
     font-size: 18px;
 }
-.alert-box{
+.alert-box, .succeed{
     background-color: whitesmoke;
     position: absolute;
-    margin-top: 12%;
+    bottom: 10px;
+    left: 39%;
     max-width: 300px;
     box-shadow: 1px 1px 2px 1px rgba(0,0,0,0.09)
 }
@@ -91,9 +93,12 @@ a.showQuiz{
     color:rgb(84, 31, 102);
     font-size: 22px;
 }
+.succeed h3{
+    color: rgb(26, 128, 35);
+}
 
 .quizPopover p{
-    color: rgb(84, 31, 102);
+    color: rgb(132, 32, 165);
     font-size: 12px;
     font-weight: bold;
     text-align: center;

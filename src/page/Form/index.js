@@ -24,6 +24,7 @@ export default function UserForm(){
     const [loading, setLoading] = useState(false);
     const [alerts, setAlerts ] = useState(false);
     const [showQuiz,setShowQuiz] = useState(false);
+    const [showConfirmSent, setConfirmSent] = useState(false);
 
     const history = useHistory();
     let {tag, color, favoritePlace, eventStyle} ='';
@@ -69,6 +70,7 @@ export default function UserForm(){
             api.post('/sendMail',data)
             .then(res =>{
                 setLoading(false);
+                setConfirmSent(true);
                 history.push('/');
                 console.log(res);
             }).catch(err =>{
@@ -214,6 +216,15 @@ export default function UserForm(){
                     Agradecemos pela sua compreensão
                 </p>
             </Alert>:null}
+            { showConfirmSent?
+                <Alert className="succeed"variant="" onClose={() => setAlerts(false)} dismissible>
+                <h3>Sua mensagem foi enviada com sucesso!!</h3>
+                <hr/>
+                <p>
+                    Muito obrigado por utilizar dos nossos serviços, nossa equipe entrará em contato em breve!
+                </p>
+                </Alert>:null}
+            
         </div>
     )
 }
