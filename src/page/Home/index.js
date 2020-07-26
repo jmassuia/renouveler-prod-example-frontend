@@ -198,21 +198,21 @@ export default function Home(){
                     <div className="co-worker">
                         <img src={image} alt=""/>
                         <div className="employee-content">
-                            <h6>Nome:</h6>
+                            <h6>Nome</h6>
                             <p>Profissao</p>
                         </div>
                     </div>
                     <div className="co-worker">
                         <img src={image} alt=""/>
                         <div className="employee-content">
-                            <h6>Nome:</h6>
+                            <h6>Nome</h6>
                             <p>Profissao</p>
                         </div>
                     </div>
                     <div className="co-worker">
                         <img src={image} alt=""/>
                         <div className="employee-content">
-                            <h6>Nome:</h6>
+                            <h6>Nome</h6>
                             <p>Profissao</p>
                         </div>
                     </div>
