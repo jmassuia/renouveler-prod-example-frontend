@@ -1,0 +1,47 @@
+.quiz{
+    margin: 10px 0px 0px 0px;
+    padding: 20px 20px 20px 20px;
+}
+
+.quiz .default-container{
+    display:flex;
+    margin-top: 10px;
+    justify-content: space-evenly;
+    background-color: whitesmoke;
+    border-radius: 6px;
+    box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.05);
+    margin-bottom: 10px;
+    max-width: 800px;
+    flex-wrap: wrap;
+}
+.quiz .default-button{
+    color: white;
+    background-color: rgb(156, 170, 199);
+    margin: 5px 0px 5px 0px;
+    height: 30px;
+    text-align: center;
+    margin-left: 5px;
+}
+.quiz button:focus{
+    outline: none;
+    box-shadow: none;
+    background-color: rgb(84, 31, 102);
+}
+.quiz .img-container{
+    text-align: center;
+    min-height: 200px;
+}
+.quiz .img-container img{
+    border-radius: 4px;
+    box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.05);
+    max-height: 200px;
+    width: 400px;
+}
+.quiz label.form-label{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.confirm-button{
+    background-color: rgb(84, 31, 102);
+    color:white;
+}
