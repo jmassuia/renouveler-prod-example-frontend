@@ -20,9 +20,11 @@
     background-size: 100%;
 }
 
-.jumbotron:hover{
-    height: 650px;
-}
+@media screen and (max-width: 500px) {
+    .jumbotron{
+        height: 330px;
+    }
+ }
 
 .jumbotron .slogan{
     margin-top: 80px;
