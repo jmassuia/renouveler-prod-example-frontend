@@ -91,8 +91,8 @@ export default function UserForm(){
         <Popover id="popover-basic" className="quizPopover">
             <Popover.Title as="h3">Sobre o quiz</Popover.Title>
             <Popover.Content>
-                O Quiz server para que possamos identificar o seu perfil, conhecendo melhor os seus gostos
-                e sua personalidade. Com isso, conseguiremos oferecer projetos de forma muito mais efetiva.
+                O Quiz nos ajuda a identificar o seu perfil, conhecendo melhor os seus gostos
+                e sua personalidade. Como resultado, conseguiremos oferecer projetos de forma muito mais efetiva e de acordo com seus gostos.
                 
             </Popover.Content>
             <hr/>
@@ -102,14 +102,16 @@ export default function UserForm(){
 
     return(
         <div className="quiz">
-            <Form className="form-quiz" id="top">
+            <Form className="form-quiz" id="top"onSubmit={handleSubmit}>
                 <Form.Row>
                     <Form.Group as={Col} controlId="formGridEmail">
                     <Form.Label>Nome</Form.Label>
                     <Form.Control type="text" placeholder="Insira seu nome..."
                     value={name}
                     onChange={e => setName(e.target.value)}
-                    required/>
+                    required
+                    pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]{3,15}"
+                    />
                     </Form.Group>
                     <Form.Group as={Col} controlId="formGridPassword">
                     <Form.Label>Sobrenome</Form.Label>
@@ -132,7 +134,9 @@ export default function UserForm(){
                         <Form.Control type="text" placeholder="Insira seu CPF..." 
                         value={cpf}
                         onChange={e => setCpf(e.target.value)}
-                        required/>
+                        required
+                        pattern="[0,1,2,3,4,5,6,7,8,9]{11}"
+                        />
                     </Form.Group>
                 </Form.Row>
                 <Form.Row>
@@ -141,7 +145,9 @@ export default function UserForm(){
                         <Form.Control type="text" placeholder="Insira sua cidade..." 
                         value={city}
                         onChange={e => setCity(e.target.value)}
-                        required/>
+                        required
+                        pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ]{4,50}"
+                        />
                     </Form.Group>
                     <Form.Group as={Col} sm={4} controlId="formGridState">
                         <Form.Label>Estado</Form.Label>
@@ -184,7 +190,9 @@ export default function UserForm(){
                         <Form.Control type="text" placeholder="Insira um número..." 
                         value={phone}
                         onChange={e => setPhone(e.target.value)}
-                        required/>
+                        required
+                        pattern="[0,1,2,3,4,5,6,7,8,9]{8,11}"
+                        />
                     </Form.Group>
                 </Form.Row>
                 <Form.Row>
@@ -198,7 +206,7 @@ export default function UserForm(){
                 <hr/>
                 {loading ? <Spinner className="customized-spinner"animation="border"/> : null}
                 <div className="buttonGroup">
-                    <Button className="submitForm"variant="outline-none" type="submit" onClick={handleSubmit}>
+                    <Button className="submitForm"variant="outline-none" type="submit">
                         Enviar
                     </Button>
                     <p>ou</p>

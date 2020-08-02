@@ -7,6 +7,10 @@ div.quiz{
 h4{
     text-align: center;
 }
+
+input:valid{
+    border-bottom: 2px solid green;
+}
 .form-quiz{
     width: 85%;
     height: 85%;

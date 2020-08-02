@@ -21,6 +21,20 @@ import values from '../../assets/Images/Values.png';
 import mission from '../../assets/Images/Mission.png';
 import vision from '../../assets/Images/Vision.png';
 
+import image1 from '../../assets/Images/image (2).png';
+import image2 from '../../assets/Images/image (3).png';
+import image3 from '../../assets/Images/image (4).png';
+import image4 from '../../assets/Images/image (5).png';
+import image5 from '../../assets/Images/image (6).png';
+import image6 from '../../assets/Images/image (7).png';
+import image7 from '../../assets/Images/image (8).png';
+import image8 from '../../assets/Images/image (9).png';
+import image9 from '../../assets/Images/image (10).png';
+import image10 from '../../assets/Images/image (11).png';
+import image11 from '../../assets/Images/image (12).png';
+import image12 from '../../assets/Images/image (13).png';
+
+
 import './style.css';
 
 export default function Home(){
@@ -155,18 +169,52 @@ export default function Home(){
         <h2 id="services">Serviços</h2>
         <Carousel className="carousel-container">
             <Carousel.Item className="carousel-item">
-                    <img src={image} alt=""/>
-                    <img src={image} alt=""/>
-                    <img src={image} alt=""/>
-                    <img src={image} alt=""/>
-                    <img src={image} alt=""/>
+                <div className="items">
+                    <div className="image-container">
+                        <img src={image1}/>
+                    </div>
+                    <div className="image-container">
+                        <img src={image2}/>
+                    </div>
+                    <div className="image-container">
+                        <img src={image3}/>
+                    </div>
+                    <div className="image-container">
+                        <img src={image4}/>
+                    </div>
+                    <div className="image-container">
+                        <img src={image5}/>
+                    </div>    
+                </div>
             </Carousel.Item>
-            <Carousel.Item className="carousel-item">
-                    <img src={image} alt=""/>
-                    <img src={image} alt=""/>
-                    <img src={image} alt=""/>
-                    <img src={image} alt=""/>
-                    <img src={image} alt=""/>
+            <Carousel.Item>
+                <div className="items">
+                    <div className="image-container">
+                        <img src={image6}/>
+                    </div>
+                    <div className="image-container">
+                        <img src={image7}/>
+                    </div>
+                    <div className="image-container">
+                        <img src={image8}/>
+                    </div>
+                    <div className="image-container">
+                        <img src={image9}/>
+                    </div>
+                    <div className="image-container">
+                        <img src={image10}/>
+                    </div>    
+                </div>
+            </Carousel.Item>
+            <Carousel.Item>
+                <div className="items">
+                    <div className="image-container">
+                        <img src={image11}/>
+                    </div>
+                    <div className="image-container">
+                        <img src={image12}/>
+                    </div>
+                </div>
             </Carousel.Item>
         </Carousel>  
         <h2>Nossa empresa</h2>

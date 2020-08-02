@@ -92,32 +92,47 @@ export default function Quiz(){
                     <Container className="default-container">
                             <Button className="default-button" variant="outline-none"
                              onClick={() =>setEventStyle('Balada_e/ou_Festivais músicais')}
-                            >#Balada_e/ou_Festivais músicais
+                            >#Balada
                                 <Emoji text=":dancer:"/>
                             </Button>
                             <Button className="default-button" variant="outline-none"
                              onClick={() =>setEventStyle('Eventos_de_Games')}
-                            >#Eventos_de_Games
+                            >#Games
                                 <Emoji text=":video_game:"/>
                             </Button>
                             <Button className="default-button" variant="outline-none"
                              onClick={() =>setEventStyle('Festivais_de_Grastronomia')}
-                            >#Festivais_de_Grastronomia
+                            >#Culinária
                                 <Emoji text=":spaghetti:"/>
                             </Button>
                             <Button className="default-button" variant="outline-none"
                              onClick={() =>setEventStyle('Barres_e/ou_Churrascarias')}
-                            >#Barres_e/ou_Churrascarias
+                            >#Churrasco
+                            <Emoji text=":meat_on_bone:"/>
+                            </Button>
+                            <Button className="default-button" variant="outline-none"
+                             onClick={() =>setEventStyle('Barres_e/ou_Churrascarias')}
+                            >#Bar
                             <Emoji text=":beers:"/>
                             </Button>
                             <Button className="default-button" variant="outline-none"
                              onClick={() =>setEventStyle('Passeios_em_fámilia')}
-                            >#Passeios_em_fámilia
+                            >#Família
                             <Emoji text=":family:"/></Button>
                             <Button className="default-button" variant="outline-none"
                              onClick={() =>setEventStyle('Viagens')}
                             >#Viagens
                             <Emoji text=":airplane:"/>
+                            </Button>
+                            <Button className="default-button" variant="outline-none"
+                             onClick={() =>setEventStyle('Barres_e/ou_Churrascarias')}
+                            >#Shopping
+                            <Emoji text=":shopping_bags:"/>
+                            </Button>
+                            <Button className="default-button" variant="outline-none"
+                             onClick={() =>setEventStyle('Barres_e/ou_Churrascarias')}
+                            >#Sports
+                            <Emoji text=":soccer:"/>
                             </Button>
                             <Button className="default-button" variant="outline-none"
                              onClick={() =>setEventStyle('Reservado')}

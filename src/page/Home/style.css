@@ -161,25 +161,36 @@ h2 .plus-icon{
     margin-bottom: 30px;
 }
 
-.carousel-container{
+.carousel-container, .team-container{
     display: flex;
     align-items: center;
     background-color: #ECECEC;
     border-radius: 5px;
     margin: 20px 10px 20px 10px;
     min-height: 300px;
+    position: inherit;
+}
+.carousel-container .carousel-item .items{
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
     flex-wrap: wrap;
 }
-
-.carousel-container .carousel-item{
-    text-align: center;
+.carousel-container .carousel-item .image-container{
+    height: 200px;
+    width: 250px;
 }
 
+@media screen and (max-width: 1200px){
+    .carousel-container .carousel-item .image-container{
+        margin-top: 2%;
+        margin-bottom: 2%;
+    }
+}
 .carousel-container .carousel-item img{
-    margin-left: 10px;
     border-radius: 5px;
-    height: 15%;
-    width: 18%;
+    height: 100%;
+    width: 100%;
 }
 
 .company-information{
@@ -191,6 +202,7 @@ h2 .plus-icon{
 .company-information .Rows .cols{
     display: flex;
     justify-content: space-around;
+    position: inherit;
 }
 
 .company-information .about-us{
@@ -211,9 +223,8 @@ h2 .plus-icon{
 }
 
 .company-information .Rows .img-group{
-    margin-top: 40px;
+    margin-top: 20%;
     margin-bottom: 40px;
-    position: inherit;
 }
 
 .company-information .img-group img:hover{
@@ -229,9 +240,9 @@ h2 .plus-icon{
 
 .company-information .our-team{
     margin: 0% 0% 0% 25%;
-    display: inline-block;
+    /*display: inline-block;*/
+    display: none;
     text-align: center;
-    align-items: center;
 }
 
 @media screen and (max-width: 1050px){
@@ -260,6 +271,10 @@ h2 .plus-icon{
     margin-top: 15px;
     max-width: 180px;
     border-radius: 48%;
+}
+
+.company-information .our-team .team-container .co-worker p{
+    text-align: center;
 }
 
 .container-popover{
