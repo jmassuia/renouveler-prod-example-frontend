@@ -91,27 +91,27 @@ export default function Quiz(){
                     <Form.Label>Qual das TAGs de evento você mais se identifica?</Form.Label>
                     <Container className="default-container">
                             <Button className="default-button" variant="outline-none"
-                             onClick={() =>setEventStyle('Balada_e/ou_Festivais músicais')}
+                             onClick={() =>setEventStyle('Balada')}
                             >#Balada
                                 <Emoji text=":dancer:"/>
                             </Button>
                             <Button className="default-button" variant="outline-none"
-                             onClick={() =>setEventStyle('Eventos_de_Games')}
+                             onClick={() =>setEventStyle('Games')}
                             >#Games
                                 <Emoji text=":video_game:"/>
                             </Button>
                             <Button className="default-button" variant="outline-none"
-                             onClick={() =>setEventStyle('Festivais_de_Grastronomia')}
+                             onClick={() =>setEventStyle('Culinária')}
                             >#Culinária
                                 <Emoji text=":spaghetti:"/>
                             </Button>
                             <Button className="default-button" variant="outline-none"
-                             onClick={() =>setEventStyle('Barres_e/ou_Churrascarias')}
+                             onClick={() =>setEventStyle('Churrascarias')}
                             >#Churrasco
                             <Emoji text=":meat_on_bone:"/>
                             </Button>
                             <Button className="default-button" variant="outline-none"
-                             onClick={() =>setEventStyle('Barres_e/ou_Churrascarias')}
+                             onClick={() =>setEventStyle('Barres')}
                             >#Bar
                             <Emoji text=":beers:"/>
                             </Button>
@@ -125,13 +125,13 @@ export default function Quiz(){
                             <Emoji text=":airplane:"/>
                             </Button>
                             <Button className="default-button" variant="outline-none"
-                             onClick={() =>setEventStyle('Barres_e/ou_Churrascarias')}
+                             onClick={() =>setEventStyle('Shopping')}
                             >#Shopping
                             <Emoji text=":shopping_bags:"/>
                             </Button>
                             <Button className="default-button" variant="outline-none"
-                             onClick={() =>setEventStyle('Barres_e/ou_Churrascarias')}
-                            >#Sports
+                             onClick={() =>setEventStyle('Esportes')}
+                            >#Esportes
                             <Emoji text=":soccer:"/>
                             </Button>
                             <Button className="default-button" variant="outline-none"
