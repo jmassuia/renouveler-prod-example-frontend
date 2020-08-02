@@ -168,7 +168,6 @@ h2 .plus-icon{
     border-radius: 5px;
     margin: 20px 10px 20px 10px;
     min-height: 300px;
-    position: inherit;
 }
 .carousel-container .carousel-item .items{
     display: flex;
