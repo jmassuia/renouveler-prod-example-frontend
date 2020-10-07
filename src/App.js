@@ -46,7 +46,7 @@ function App() {
             </Row>
             <hr/>
             <Row className="compliance-container">
-                <p>©Todos os direitor Reservados - Renouveler</p>
+                <p>©Todos os direitos Reservados - Renouveler</p>
                 <p>Consultoria&Cia MEI - CNPJ 34.322.664/0001-99</p>
             </Row>
     </div>
