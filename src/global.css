@@ -3,56 +3,64 @@
     padding: 0%;
     border: 0%;
     -webkit-appearance: none;
-    -webkit-animation: none;
     max-width: 1440px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none;
 }
 
-
-body{
-    background-color: rgb(255,255,255);
-}
-
-
-h2{
-    margin: 50px 0px 0px 0px;
-    font-size: 30px;
-    display: flex;
-    justify-content: center;
-}
-p{
-    font-size: 16px;
-    text-align: justify;
-}
 #navbar{
     top:0;
     text-emphasis: 100%;
     width: 100%;
     position: fixed;
-    background-color: rgb(255,255,255);
+    background-color: white;
+    background-color: #5A5A5A;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+@media (min-width:1000px){
+    #navbar{
+        height: 80px;
+    }
 }
 
 .navlink{
-    color: black;
+    color: white;
     font-size: 14px;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .navlink:hover{
-    color: rgb(84, 31, 102);
-}
-.navbar-toggler span{
-    background-image: url("../src/assets/Images/toggle-icon.webp");
+    color: rgb(255,170,48);
 }
 
+.navbar .navbar-brand-tab{
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    width: 100px;
+    height: 80px;
+}
+
+.navbar .navbar-brand-tab img{
+    width: 100%;
+    height: 100%;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255,170,48)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+  
 .footer{
     width: 100%;
     left: 0;
     bottom: 0;
-    background-color: #444;
+    background-color: #5A5A5A;
 }
 
-.footer .contact-container{
+.footer .contacts-compliance{
     text-align: center;
     color: white;
 }
@@ -60,13 +68,12 @@ p{
     margin-top: 30px;
 }
 
-.footer .contact-container .contacts h4{
+.footer .contacts-compliance .contacts h4{
     font-size: 16px;
 }
 
-.footer .contact-container .contacts p, .social-media p, .footer .compliance-container p{
+.footer .contacts-compliance .contacts p, .social-media p{
     font-size: 12px;
-    text-align: center;
 }
 
 .footer hr{
@@ -81,7 +88,7 @@ p{
     height: 45px;
 }
 
-.footer .compliance-container p, .footer .contact-container p{
+.footer .compliance-container p, .footer .contacts-compliance p{
     margin-bottom: 0;
     font-size: 12px;
 }

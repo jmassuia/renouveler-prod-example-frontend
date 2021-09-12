@@ -6,7 +6,7 @@
 .quiz .default-container{
     display:flex;
     margin-top: 10px;
-    justify-content: space-evenly;
+    justify-content: left;
     background-color: whitesmoke;
     border-radius: 6px;
     box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.05);
@@ -25,16 +25,17 @@
 .quiz button:focus{
     outline: none;
     box-shadow: none;
-    background-color: rgb(84, 31, 102);
+    background-color: rgb(255, 170, 48);
 }
 .quiz .img-container{
     text-align: center;
-    min-height: 200px;
 }
 .quiz .img-container img{
     border-radius: 4px;
     box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.05);
     width: 100%;
+    max-width: 600px;
+    max-height: 300px;
 }
 .quiz label.form-label{
     margin-top: 20px;
