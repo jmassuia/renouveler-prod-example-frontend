@@ -1,15 +1,16 @@
-import React,{useState} from 'react'
+import React,{useEffect,useState} from 'react'
 
 import{ Jumbotron, Card, CardDeck, Container, Button, Row, Col, Carousel, OverlayTrigger, Popover} from 'react-bootstrap';
 import ListOutlinedIcon from '@material-ui/icons/ListOutlined';
 import { Icon } from '@material-ui/core';
 import {useHistory} from 'react-router-dom';
-
+import firebase from 'firebase';
+import firebaseConfig from '../../configs/firebase';
 
 import image from '../../assets/Images/Home office.jpg'
 
 
-import lifeQuality from '../../assets/Images/Saúde.png';
+import lifeQuality from '../../assets/Images/quality-of-work-life-featured.png';
 import transformation from '../../assets/Images/Transformatino.jpeg';
 import Payment from '../../assets/Images/E-Payment-Transaction-Facilities-and-Their-Strengths-and-Weaknesses_Feature-Image.jpg';
 
@@ -38,16 +39,45 @@ import image12 from '../../assets/Images/image (13).png';
 import './style.css';
 
 export default function Home(){
+
+    /* Connection to firebase Storage*/        
+        const storage = firebase.storage();
+    /* Creating Firebase reference path*/    
+        const storageRef = storage.ref();
+    /* Creating Child reference */
+        const images = storageRef.child('images');
+    /* List all images inside images bucket */
+
+    const [imageArray,setImageArray] = useState([]);
+
+    useEffect(()=>{
+
+        function handleImageList(){
+            images.listAll()
+                .then(res =>{
+                    handleImageURL(res.items); 
+                }).catch(error =>{
+                    return error;
+                });
+            
+        }
+        function handleImageURL(imageList){
+          imageList.map(image => {
+               image.getDownloadURL()
+                .then(url =>{
+                    imageArray.push(url);
+                }).catch(error => {return error});
+            });
+        }
+        handleImageList();
+    },[])
     
     const history = useHistory();
 
     function handleContactRequest(){
         history.push('/form');
     }
-    function handleTestRequest(){
-        history.push('/form');
-        
-    }
+
     const valuesOver =(
         <Popover id="popover-basic" className="container-popover">
             <Popover.Title as="h3" className="popover-text">Valor</Popover.Title>
@@ -132,77 +162,83 @@ export default function Home(){
         </CardDeck>
         
         <h2>Muito <Icon className="plus-icon">add_circle</Icon></h2>
-        <Container className="container-info" fluid>
-            <Row className="Rows">
-                <Col className="img-col" sm={6}>
-                    <img src={transformation}/>
-                </Col>
-                <Col className="text-col">
+        <div className="diagonal-container">
+            <div className="diagonal-box">
+                <div className="content">
                     <h3>Tecnologia</h3>
                     <p>A marca de nossa empresa em soluções inteligentes para sua construção,
                     arte, finalização e projetos com que á de melhor em automação e controle
                     </p>
-                </Col>
-            </Row>
-            <Row className="Rows">
-                <Col className="text-col">
+                </div>
+                <div className="image">
+                    <img src={transformation} alt=""/>
+                </div>
+            </div>
+        </div>
+        <div className="diagonal-container">
+            <div className="diagonal-box">
+                <div className="image">
+                    <img src={lifeQuality} alt=""/>
+                </div>
+                <div className="content">
                     <h3>Qualidade de Vida</h3>
-                        <p>Temos em nosso portfólio opções de projetos 100% sustentáveis,
-                        voltados à saúde que promovem atividades físicas e sociais.</p>
-                </Col>
-                <Col className="img-col img-left" sm={5}>
-                    <img src={lifeQuality}/>
-                </Col>
-            </Row>
-            <Row className="Rows">
-                <Col className="img-col" sm={6}>
-                    <img src={Payment}/>
-                </Col>
-                <Col className="text-col">
+                    <p>Temos em nosso portfólio opções de projetos 100% sustentáveis,
+                        voltados à saúde que promovem atividades físicas e sociais.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div className="diagonal-container">
+            <div className="diagonal-box">
+                <div className="content">
                     <h3>Facilidade</h3>
-                        <p>Nossa empresa tem como prioridade o relacionamento com nossos clientes
+                    <p>Nossa empresa tem como prioridade o relacionamento com nossos clientes
                         e a facilidade de pagamentos, entrada parcelada, boleto e descontos à
-                        vista.</p>
-                </Col>
-            </Row>
-        </Container>
+                        vista.
+                    </p>
+                </div>
+                <div className="image">
+                    <img src={Payment} alt=""/>
+                </div>
+            </div>
+        </div>
         <h2 id="services">Serviços</h2>
         <Carousel className="carousel-container">
             <Carousel.Item className="carousel-item">
                 <div className="items">
                     <div className="image-container">
-                        <img src={image1}/>
+                        <img src={image1} alt=""/>
                     </div>
                     <div className="image-container">
-                        <img src={image2}/>
+                        <img src={image2} alt=""/>
                     </div>
                     <div className="image-container">
-                        <img src={image3}/>
+                        <img src={image3} alt=""/>
                     </div>
                     <div className="image-container">
-                        <img src={image4}/>
+                        <img src={image4} alt=""/>
                     </div>
                     <div className="image-container">
-                        <img src={image5}/>
+                        <img src={image5} alt=""/>
                     </div>    
                 </div>
             </Carousel.Item>
             <Carousel.Item>
                 <div className="items">
                     <div className="image-container">
-                        <img src={image6}/>
+                        <img src={image6} alt=""/>
                     </div>
                     <div className="image-container">
-                        <img src={image7}/>
+                        <img src={image7} alt=""/>
                     </div>
                     <div className="image-container">
-                        <img src={image8}/>
+                        <img src={image8} alt=""/>
                     </div>
                     <div className="image-container">
-                        <img src={image9}/>
+                        <img src={image9} alt=""/>
                     </div>
                     <div className="image-container">
-                        <img src={image10}/>
+                        <img src={image10} alt=""/>
                     </div>    
                 </div>
             </Carousel.Item>
@@ -239,32 +275,6 @@ export default function Home(){
                         </OverlayTrigger>
                     </div>
                 </Col>
-            </Row>
-            <Row className="our-team">
-                <h5>Conheça nosso time</h5> 
-                <Container className="team-container">
-                    <div className="co-worker">
-                        <img src={image} alt=""/>
-                        <div className="employee-content">
-                            <h6>Nome</h6>
-                            <p>Profissão</p>
-                        </div>
-                    </div>
-                    <div className="co-worker">
-                        <img src={image} alt=""/>
-                        <div className="employee-content">
-                            <h6>Nome</h6>
-                            <p>Profissão</p>
-                        </div>
-                    </div>
-                    <div className="co-worker">
-                        <img src={image} alt=""/>
-                        <div className="employee-content">
-                            <h6>Nome</h6>
-                            <p>Profissão</p>
-                        </div>
-                    </div>
-                </Container>
             </Row>
         </Container>
         <Container className="contact-us" fluid>

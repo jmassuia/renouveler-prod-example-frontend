@@ -1,7 +1,21 @@
+*{
+    -webkit-appearance: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+h2{
+    margin: 50px 0px 0px 0px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+}
+p{
+    font-size: 16px;
+}
 
 .button{
     color:white;
-    background-color: rgb(84, 31, 102);
+    background-color: rgb(40, 166, 147);
     border: none;
     border-radius: 4px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -9,21 +23,23 @@
     position: inherit;
 }
 
+.button:hover{
+    color: white;
+    background-color: rgb(35, 142, 126);
+}
 .jumbotron{
     text-emphasis: 100%;
     text-emphasis-style: initial;
     font-family: 'Courier New', Courier, monospace;
-    height: 550px;
+    height: 80vh;
     transition: height 2s;
     background-image: url('../../assets/Images/JumbotromTeste.png');
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
 }
 
-@media screen and (max-width: 500px) {
-    .jumbotron{
-        height: 330px;
-    }
+.jumbotron:hover{
+    height: 85vh;
 }
 
 .jumbotron .slogan{
@@ -41,7 +57,7 @@
 
 .jumbotron .free-user-test .btn{
     color: white;
-    background-color: rgb(88, 9, 114);
+    background-color: rgb(53, 192, 171);
     max-width: 260px;
     min-height: 30%;
 }
@@ -62,7 +78,7 @@
 }
 
 .star-icon{
-    color: rgb(71, 9, 92);
+    color: rgb(53, 192, 171);
     margin-left: 49.45%;
 }
 
@@ -86,7 +102,7 @@
 
 .Card-Deck .cards .cardFooter{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     border: none;
 }
 
@@ -104,71 +120,77 @@
 }
 
 .Card-Deck .cards .cardFooter .button:hover{
-    background-color: rgb(71, 9, 92);
+    background-color: rgb(35, 142, 126);
 }
 
 h2 .plus-icon{
     margin-left: 15px;
-    color: rgb(71, 9, 92);
+    color: rgb(53, 192, 171);
     font-size: 40px;
 }
-.container-info{
-    margin-top: 10px;
-    background-image: url("../../assets/Images/about-usbg.jpg");
-}
 
-.container-info .Rows{
-    display: flex;
-    justify-content: space-between;
-    background-color: #ECECEC;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    min-height: 250px;
-    flex-wrap:wrap;
-}
-
-.container-info .Rows .img-col{
-    padding: 0;
-    position: inherit;
-}
-
-.container-info .Rows img{
-    height: 250px;
-    /*width: 561px;*/
+.diagonal-container{
+    margin-top: 5vw;
+    margin-bottom: 10vw;
     width: 100%;
 }
-
-@media screen and (max-width: 520px){
-    .container-info .Rows img{
-        width: 480px;
-    }
+.diagonal-box{
+    display: flex;
+    background-color: rgba(53, 192, 171,0.25);
+    height: 22rem;
+    transform: skewY(-5deg);
+    position: relative;
+    z-index: -1;
 }
 
-@media screen and (max-width: 1050px){
-    .container-info .Rows img{
-        width: 100%;
-    }
-}
 
-.container-info .Rows .text-col{
+.diagonal-box .image{
+    width: 85%;
+    height: 100%;
+}
+.diagonal-box .image img{
+    width: 100%;
+    height: 100%;
+}
+.diagonal-box .content{
+    margin-top: 10vh;
+    margin-bottom: 5vh;
+    transform: skewY(5deg);
+}
+.diagonal-box .content h3{
     text-align: center;
-    margin-top: 10px;
-    position: inherit;
+    margin-bottom: 25px;
+}
+.diagonal-box .content p{
+    padding: 0px 20px 0px 20px
 }
 
-.container-info .Rows .text-col h3{
-    color:rgb(84, 31, 102);
-    margin-bottom: 30px;
+@media (max-width:900px){
+    .diagonal-container{
+        margin: 10rem 0 10rem 0;
+    }
+    .diagonal-box{
+        display: inline-block;
+        height: 15rem;
+    }
+    .diagonal-box .image{
+        width: 100%;
+        height: 100%;
+    } .diagonal-box .content{
+        width: 100%;
+        height: 100%;
+    }
 }
-
-.carousel-container, .team-container{
+.carousel-container{
+    margin: 20px 10px 20px 10px;
     display: flex;
     align-items: center;
+    position: relative;
     background-color: #ECECEC;
     border-radius: 5px;
-    margin: 20px 10px 20px 10px;
     min-height: 300px;
 }
+
 .carousel-container .carousel-item .items{
     display: flex;
     text-align: center;
@@ -176,17 +198,17 @@ h2 .plus-icon{
     flex-wrap: wrap;
 }
 .carousel-container .carousel-item .image-container{
-    height: 200px;
-    width: 250px;
+    margin: 2.5rem auto;
+    height: 14rem;
+    width: 14rem;
 }
 
-@media screen and (max-width: 1200px){
-    .carousel-container .carousel-item .image-container{
-        margin-top: 2%;
-        margin-bottom: 2%;
-    }
+.carousel-container .carousel-item{
+    text-align: center;
 }
+
 .carousel-container .carousel-item img{
+    margin-left: 10px;
     border-radius: 5px;
     height: 100%;
     width: 100%;
@@ -196,12 +218,13 @@ h2 .plus-icon{
     margin-top: 30px;
     position: inherit;
     width: 100%;
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 
 .company-information .Rows .cols{
     display: flex;
     justify-content: space-around;
-    position: inherit;
 }
 
 .company-information .about-us{
@@ -210,7 +233,6 @@ h2 .plus-icon{
     border-radius: 5px;
     color: black;
     position: inherit;
-    margin-bottom: 20px;
 
 }
 
@@ -222,7 +244,7 @@ h2 .plus-icon{
 }
 
 .company-information .Rows .img-group{
-    margin-top: 20%;
+    margin-top: 40px;
     margin-bottom: 40px;
 }
 
@@ -230,41 +252,25 @@ h2 .plus-icon{
     box-shadow: 0px 2px 4px rgba(84, 31, 102,3);
 }
 .company-information .img-group img{
-    margin-top: 30px;
     margin-left: 10px;
     height: 60px;
     width: 60px;
     border-radius: 50%;
 }
 
+
 .company-information .our-team{
     margin: 0% 0% 0% 25%;
-    /*display: inline-block;*/
-    display: none;
+    /* display: inline-block; */
     text-align: center;
+    align-items: center;
+    display: none
 }
 
-@media screen and (max-width: 1050px){
-    .company-information .our-team{
-        margin-left: 15%;
-    }
-}
-
-@media screen and (max-width: 520px){
-    .company-information .our-team{
-        margin-left: 2%;
-    }
-}
 .company-information .our-team .team-container{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    max-width: 800px;
-    margin-bottom: 120px;
-}
-.company-information .our-team .team-container .co-worker{
-    margin-left: 20px;
 }
 .company-information .our-team img{
     margin-top: 15px;
@@ -272,8 +278,12 @@ h2 .plus-icon{
     border-radius: 48%;
 }
 
-.company-information .our-team .team-container .co-worker p{
-    text-align: center;
+.company-information .our-team .team-container .cols .employee-content{
+    max-width: 200px;
+}
+.company-information .our-team .team-container .cols .employee-content p{
+    word-break: break-all;
+    color: lightslategrey;
 }
 
 .container-popover{
@@ -292,9 +302,9 @@ h2 .plus-icon{
 }
 
 .contact-us .btn{
-    min-width: 80%;
+    min-width: 20%;
     height: 8%;
     margin: 3% 0% 2% 0%;
     color: white;
-    background-color: rgb(84, 31, 102);
+    background-color: rgb(40, 166, 147);
 }
