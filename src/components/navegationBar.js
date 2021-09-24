@@ -1,12 +1,29 @@
-import React from 'react';
+import React,{Component,useEffect, useState} from 'react';
 
 import{Navbar, Nav} from 'react-bootstrap';
 import logo from '../assets/Logo-Renouveler---2.png';
 
 export default function NavegationBar(){
+
+    const [position,setPosition] = useState('navbar');
+
+    function checkScroll(){
+        const scrollAmount = window.scrollY;
+        const page = `${window.location.hostname}:${window.location.port}${window.location.pathname}`;
+        const homepage = `${window.location.hostname}:${window.location.port}/`
+        console.log(page)
+        if (scrollAmount <= 150 && page===homepage){
+            setPosition('navbar');
+        }else setPosition('navbar-below');
+    }
+
+    useEffect(()=>{
+        window.addEventListener('scroll',checkScroll)
+    });
+
     return(
     <div>
-        <Navbar id="navbar"collapseOnSelect expand="lg" variant="">
+        <Navbar id={position} collapseOnSelect expand="lg" variant="">
             <Navbar.Brand className="navbar-brand-tab" href="/#home">
             <img src={logo}/>
             </Navbar.Brand>
@@ -23,3 +40,4 @@ export default function NavegationBar(){
     </div>
     )
 }
+

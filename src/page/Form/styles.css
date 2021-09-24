@@ -27,7 +27,7 @@ input:valid{
 .form-row .form-group .form-control:focus{
     box-shadow: none;
     border: transparent;
-    border-bottom: 2px solid rgb(84, 31, 102);
+    border-bottom: 2px solid rgb(35, 142, 126);
 }
 
 #textarea:focus{
@@ -68,7 +68,7 @@ input:valid{
 
 button.submitForm{
     margin-top: 5px;
-    background-color:rgb(84, 31, 102);
+    background-color:rgb(35, 142, 126);
     color: white;
     width: 100%;
     height: 25%;
